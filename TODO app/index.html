@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 8px 0;
+            padding: 6px;
+            border-radius: 4px;
+        }
+
+        .todo {
+            background-color: #eee;
+            color: gray;
+        }
+
+        .in-progress {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .done {
+            background-color: #d4edda;
+            color: #155724;
+            text-decoration: line-through;
+        }
+
+        button {
+            margin-left: 10px;
+            padding: 4px 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>todo list</h2>
+    <input id="taskInput" type="text" placeholder="Enter a task...">
+    <button id="addBtn">Add</button>
+    <ul id="taskList"></ul>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
