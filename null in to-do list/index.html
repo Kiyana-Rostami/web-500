@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="password"],
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #6b7c59;
+            color: #fff;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #000;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .done {
+            color: green;
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- to do apps -->
+    <h1>TODO App</h1>
+    <form id="todoForm">
+        <input type="text" id="taskInput" placeholder="Enter a task..." required>
+        <button type="submit">Add</button>
+    </form>
+
+    <ul id="taskList"></ul>
+    <script>
+        document.getElementById("todoForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const input = document.getElementById("taskInput");
+            const taskText = input.value.trim();
+            if (taskText === "") return;
+
+            const li = document.createElement("li");
+            li.textContent = taskText + " (in progress)";
+
+            const btn = document.createElement("button");
+            btn.textContent = "DONE";
+            btn.style.marginLeft = "10px";
+
+            btn.addEventListener("click", function () {
+                if (li.classList.contains("done")) {
+                    li.classList.remove("done");
+                    li.textContent = taskText + " (in progress)";
+                    btn.textContent = "DONE";
+                } else {
+                    li.classList.add("done");
+                    li.textContent = taskText + " (done)";
+                    btn.textContent = "UNDO";
+                }
+                li.appendChild(btn);
+            });
+
+            li.appendChild(btn);
+            document.getElementById("taskList").appendChild(li);
+            input.value = "";
+        });
+    </script>
+</body>
+
+</html>
