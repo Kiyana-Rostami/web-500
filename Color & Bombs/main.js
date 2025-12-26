@@ -5,7 +5,7 @@ const scoreEl = document.getElementById("score");
 const resetBtn = document.getElementById("reset");
 
 const SIZE = 16;
-const COLORS = ["pink", "violet", "turquoise", "gold", "lime", "skyblue"];;
+const COLORS = ["pink", "violet", "turquoise", "gold", "lime", "skyblue","lightcoral"];
 let cells = [];
 let filled = 0;
 let score = 0;
@@ -63,7 +63,6 @@ function handleClick(e) {
     const cell = e.currentTarget;
     const index = cell.dataset.index;
 
-    // جلوگیری از دوباره کلیک
     if (cell.classList.contains("filled")) return;
 
     switch (cells[index]) {
