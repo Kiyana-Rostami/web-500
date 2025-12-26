@@ -94,7 +94,7 @@ function startGame() {
     cards.push(newCard);
   });
 
-  showAllAtStart(2000);
+  showAllAtStart(3000);
 }
 
 resetBtn.addEventListener("click", startGame);

@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #222;
+  color: #fff;
+}
+
+#arrayDisplay {
+  margin: 20px;
+  font-size: 1.5rem;
+  background: #444;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #10b981;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #059669;
+}
